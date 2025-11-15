@@ -28,6 +28,88 @@ h6,
   background-size: 20px 20px;
 }
 
+
+.mobile-menu-button {
+  display: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: var(--accent);
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu-button:hover {
+  transform: scale(1.1);
+}
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  background: rgba(10, 29, 55, 0.98);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  z-index: 40;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav.active {
+  display: block;
+  animation: slideDown 0.3s ease-out;
+}
+
+.mobile-nav a {
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.mobile-nav a:last-child {
+  border-bottom: none;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Contact Form Mobile Fix */
+@media (max-width: 640px) {
+  .mobile-menu-button {
+    display: block;
+  }
+  
+  header nav {
+    display: none !important;
+  }
+  
+  /* Fix contact form padding and spacing */
+  #contact {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  #contact .contact-bg-pattern {
+    margin: 0;
+  }
+  
+  #contact form {
+    padding: 0 !important;
+  }
+  
+  #contact form .space-y-8 > * + * {
+    margin-top: 1.5rem;
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
