@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html class="light" dir="rtl" lang="ar">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>عتيق – فساتين سواريه</title>
+
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&amp;family=Tajawal:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <!-- React & ReactDOM CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0A1D37", "accent": "#D4AF37", "background-light": "#F5E6E8", "background-dark": "#0A1D37", "text-light": "#FFFFF0", "text-dark": "#0A1D37"
+                    },
+                    fontFamily: {
+                        "display": ["Tajawal", "sans-serif"],
+                        "serif": ["Amiri", "serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+
+<body class="bg-background-light dark:bg-background-dark font-display text-text-dark dark:text-text-light">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+
+            <!-- Header -->
+            <header
+                class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-accent/20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm px-4 sm:px-10 h-[72px]">
+                <div class="flex items-center gap-4 text-accent animate-slide-left">
+                    <div class="size-6 flex-shrink-0">
+                        <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h2 class="font-serif text-xl font-bold leading-none text-text-dark dark:text-accent">
+                        عتيق – فساتين سواريه</h2>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-button" id="mobileMenuBtn" aria-label="القائمة">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden sm:flex items-center flex-1 justify-end gap-8 animate-slide-right">
+                    <a class="text-text-dark dark:text-text-light text-sm font-medium leading-none hover:text-accent dark:hover:text-accent transition-colors"
+                        href="#home">الرئيسية</a>
+                    <a class="text-text-dark dark:text-text-light text-sm font-medium leading-none hover:text-accent dark:hover:text-accent transition-colors"
+                        href="#collections">المجموعات</a>
+                    <a class="text-text-dark dark:text-text-light text-sm font-medium leading-none hover:text-accent dark:hover:text-accent transition-colors"
+                        href="#about">عن عتيق</a>
+                    <a class="text-text-dark dark:text-text-light text-sm font-medium leading-none hover:text-accent dark:hover:text-accent transition-colors"
+                        href="#contact">اتصل بنا</a>
+                </nav>
+            </header>
+
+
+            <!-- Mobile Navigation Menu -->
+            <nav class="mobile-nav" id="mobileNav">
+                <a class="text-text-light text-base font-medium hover:text-accent transition-colors"
+                    href="#home">الرئيسية</a>
+                <a class="text-text-light text-base font-medium hover:text-accent transition-colors"
+                    href="#collections">المجموعات</a>
+                <a class="text-text-light text-base font-medium hover:text-accent transition-colors" href="#about">عن
+                    عتيق</a>
+                <a class="text-text-light text-base font-medium hover:text-accent transition-colors"
+                    href="#contact">اتصل بنا</a>
+            </nav>
+
+
+            <!-- Main Content -->
+            <main class="flex flex-col flex-1 pt-[72px]">
+                <section id="home" class="w-full">
+                    <div class="flex min-h-[calc(100vh-72px)] flex-col gap-6 bg-cover bg-center bg-no-repeat items-center justify-center p-4 text-center"
+                        data-alt="Model in an elegant evening gown posing with soft lighting."
+                        style='background-image: linear-gradient(rgba(10, 29, 55, 0.5) 0%, rgba(10, 29, 55, 0.7) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuA8x8YjH3NpPiysbp24ezxq-KxUyRb6_8DmXracR8A6to9HWrZz4Hib826SjxsaStPmfVbbj6blXku0W5Xnjk_5tsNw1L4alZd6ckAF1TAN5vtIdkvrQGtR2OyRCV_dXs3etoIeiANk_2bKdG28eYEDVoGdEMP3T_asziKpfi75GV8dFJVjeBVxPf-v7VbnneLJiGuTC8pEOsi5kRT32CN0P4Kmggr0c-sQ2h0WLvmevqEa6QOIWmPiLmebzgyVd2XpWpD1TU_QiJ94");'>
+                        <div class="flex flex-col gap-4">
+                            <h1
+                                class="font-serif text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-[-0.033em] text-accent animate-fade-in">
+                                فساتين سواريه فاخرة لأجمل المناسبات
+                            </h1>
+                            <h2 class="text-text-light text-lg sm:text-xl font-normal leading-normal animate-fade-in"
+                                style="animation-delay: 0.3s;">
+                                اكتشفي الأناقة والجمال في كل تصميم.
+                            </h2>
+                        </div>
+                        <a href="#collections"
+                            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 sm:h-14 sm:px-8 bg-accent text-primary text-base font-bold leading-normal tracking-[0.015em] transition-all hover:bg-yellow-400 hover:shadow-lg hover:shadow-accent/20 animate-zoom"
+                            style="animation-delay: 0.6s;">
+                            <span class="truncate">تسوق الآن</span>
+                        </a>
+                    </div>
+                </section>
+                <div class="px-4 sm:px-10 lg:px-20 xl:px-40 py-5">
+                    <div class="flex flex-col max-w-7xl mx-auto">
+                        <section id="collections" class="py-12 sm:py-20">
+                            <h2
+                                class="font-serif text-text-dark dark:text-text-light text-3xl sm:text-4xl font-bold leading-tight tracking-[-0.015em] px-4 pb-8 text-center scroll-animate">
+                                المجموعات المميزة</h2>
+
+                            <!-- Evening Dresses Grid -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
+                                <div
+                                    class="flex flex-col gap-4 pb-3 bg-white dark:bg-background-dark/30 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden border border-accent/20 hover:border-accent/40 scroll-animate">
+                                    <div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover"
+                                        data-alt="Elegant evening gown with gold details"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDzC6sKsOMoqokssWOdYlJNSAhvx10V6i3WcXHjr5eZNTb_2D6wCaQZaCVpOL06DZdWbvGRxaMgW7Cq0SWhk5rO13D0O6OrJ6r2X9xt7D_5bz9iIAIVhs6hNANnKeG2H-F9Xt-AV3z1-PHEYYnrKaQDFmOVn51P9Az34UxL9CXUhF9g1HBoilLJaDRluRnokRTcenwXc8HjSo-VDhB0yrEGVT4ruLcK94lIhzyoRSG88zXc2nshAucYoK2YgtI6JmJpBaVTdO6f5fsC");'>
+                                    </div>
+                                    <div class="px-4 pb-4 flex flex-col flex-grow">
+                                        <p
+                                            class="text-text-dark dark:text-text-light text-lg font-bold leading-normal font-serif">
+                                            فستان الملكة</p>
+                                        <p
+                                            class="text-text-dark/70 dark:text-text-light/70 text-sm font-normal leading-normal flex-grow">
+                                            تصميم فاخر بتفاصيل ذهبية</p>
+                                        <button
+                                            class="mt-4 w-full rounded-md border border-accent text-accent px-4 py-2 text-sm font-bold transition-colors hover:bg-accent hover:text-primary">عرض
+                                            التفاصيل</button>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex flex-col gap-4 pb-3 bg-white dark:bg-background-dark/30 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden border border-accent/20 hover:border-accent/40 scroll-animate">
+                                    <div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover"
+                                        data-alt="Flowing princess-style evening dress"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA3JiO0MP1kSOYhvxhbw3TPBH4oG-D9lJ2iAE5TC3gk_mh8dwtLBXX83z68z8jbr9ljYWznd0N3EJqscflAZKqTgJwolUPwSUxDb2LjzxYWowIOA7dlLMCk603eUoyce5A5C7UARvGq-Z4dPaOW3Ii4yHGmKFxbLJDZdK2sW0-NaDWXGtITJYHoGpsslU0R4w0tOj_MlKbKoX6ALnrfxCfCl4VCyEggeR4jyoCM5CsmCpAj0nP1OY7ZGTjHdb3vYjRmdUKNr8fQMTlS");'>
+                                    </div>
+                                    <div class="px-4 pb-4 flex flex-col flex-grow">
+                                        <p
+                                            class="text-text-dark dark:text-text-light text-lg font-bold leading-normal font-serif">
+                                            فستان الأميرة</p>
+                                        <p
+                                            class="text-text-dark/70 dark:text-text-light/70 text-sm font-normal leading-normal flex-grow">
+                                            نعومة فائقة بقصة سندريلا</p>
+                                        <button
+                                            class="mt-4 w-full rounded-md border border-accent text-accent px-4 py-2 text-sm font-bold transition-colors hover:bg-accent hover:text-primary">عرض
+                                            التفاصيل</button>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex flex-col gap-4 pb-3 bg-white dark:bg-background-dark/30 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden border border-accent/20 hover:border-accent/40 scroll-animate">
+                                    <div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover"
+                                        data-alt="Sparkling star-like evening dress"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAboFXyzlFP98RRqZxIQA8d7rcK9PYydIJLNeXxRz8Efy_L18iqycWqS1sGzFdZfGcQaBZKQ3VsASLtLO_pwT_-GnJmtGPf_tp_QUfbLo_uqThQ3XxkAPeVTV_P63jAAhtLGxGD-APu3f54KJZhfuKT0d1EBYgq0J47I3Zne762W310td4-vEixHRvTt8TQfLQMroucd2GwEKcoLUUiRz1M2oihVqhvqbkA_c5LzNpJUinrteRqU5D1Qje0ugLAhjlYoxsFGOnaXjZR");'>
+                                    </div>
+                                    <div class="px-4 pb-4 flex flex-col flex-grow">
+                                        <p
+                                            class="text-text-dark dark:text-text-light text-lg font-bold leading-normal font-serif">
+                                            فستان النجمة</p>
+                                        <p
+                                            class="text-text-dark/70 dark:text-text-light/70 text-sm font-normal leading-normal flex-grow">
+                                            تألقي ببريق لا يضاهى</p>
+                                        <button
+                                            class="mt-4 w-full rounded-md border border-accent text-accent px-4 py-2 text-sm font-bold transition-colors hover:bg-accent hover:text-primary">عرض
+                                            التفاصيل</button>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex flex-col gap-4 pb-3 bg-white dark:bg-background-dark/30 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden border border-accent/20 hover:border-accent/40 scroll-animate">
+                                    <div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover"
+                                        data-alt="Classic navy blue evening gown"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD7G1vGJp58pDEzZ6FjJaaTPZJVcPDaFKFSnaWJOPEerFtvsRRbCaQo_gQbbRNJ9g-gNZZyP28m2lrolK22jiq6X-vAnb6xTbj40ibJ29LKBexzq46SzHFbIJSr9B3gq_Xo2uinf_rJix6fsTsAMIuyPiYCY3-dat8GrrKC0NPBy6GhPVjfGb2beEmuuwpQO670bbu-ilejbugQWiu6KRu6iuLlpCHCXw8i9Oc4kIYcJ7Yc92NXCsuT2lVvHrwRs43j-haJykmmXvbg");'>
+                                    </div>
+                                    <div class="px-4 pb-4 flex flex-col flex-grow">
+                                        <p
+                                            class="text-text-dark dark:text-text-light text-lg font-bold leading-normal font-serif">
+                                            فستان السهرة</p>
+                                        <p
+                                            class="text-text-dark/70 dark:text-text-light/70 text-sm font-normal leading-normal flex-grow">
+                                            أناقة كلاسيكية باللون الكحلي</p>
+                                        <button
+                                            class="mt-4 w-full rounded-md border border-accent text-accent px-4 py-2 text-sm font-bold transition-colors hover:bg-accent hover:text-primary">عرض
+                                            التفاصيل</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </section>
+
+                        <!-- Product Showcase (React Component) -->
+                        <!-- <section class="py-12 sm:py-20">
+                            <div id="react-product-showcase"></div>
+                        </section> -->
+
+                        <!-- About Section -->
+                        <section id="about" class="py-12 sm:py-20 text-center">
+                            <div class="flex flex-col items-center gap-6 px-4">
+                                <h2
+                                    class="font-serif text-text-dark dark:text-text-light text-3xl sm:text-4xl font-bold leading-tight tracking-[-0.015em] scroll-animate">
+                                    عن عتيق</h2>
+                                <p
+                                    class="text-text-dark/80 dark:text-text-light/80 text-base font-normal leading-relaxed max-w-3xl scroll-animate">
+                                    عتيق يقدم أجمل فساتين السهرة بتصميمات فاخرة ومميزة تناسب كل النساء الباحثات عن
+                                    الأناقة والجمال.</p>
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 max-w-5xl w-full">
+                                    <div
+                                        class="flex flex-col items-center text-center gap-3 rounded-lg border-2 border-accent/30 bg-white dark:bg-background-dark/50 p-6 shadow-lg hover:shadow-2xl hover:border-accent transition-all duration-300 hover:-translate-y-1 scroll-animate">
+                                        <span
+                                            class="material-symbols-outlined text-accent text-5xl drop-shadow-lg">diamond</span>
+                                        <h3 class="text-text-dark dark:text-text-light text-xl font-bold font-serif">
+                                            تصاميم حصرية</h3>
+                                        <p
+                                            class="text-text-dark/70 dark:text-text-light/70 text-sm font-normal leading-normal">
+                                            كل فستان هو قطعة فنية فريدة.</p>
+                                    </div>
+                                    <div
+                                        class="flex flex-col items-center text-center gap-3 rounded-lg border-2 border-accent/30 bg-white dark:bg-background-dark/50 p-6 shadow-lg hover:shadow-2xl hover:border-accent transition-all duration-300 hover:-translate-y-1 scroll-animate">
+                                        <span
+                                            class="material-symbols-outlined text-accent text-5xl drop-shadow-lg">verified</span>
+                                        <h3 class="text-text-dark dark:text-text-light text-xl font-bold font-serif">
+                                            جودة عالية</h3>
+                                        <p
+                                            class="text-text-dark/70 dark:text-text-light/70 text-sm font-normal leading-normal">
+                                            نستخدم أفضل الأقمشة والتطريزات.</p>
+                                    </div>
+                                    <div
+                                        class="flex flex-col items-center text-center gap-3 rounded-lg border-2 border-accent/30 bg-white dark:bg-background-dark/50 p-6 shadow-lg hover:shadow-2xl hover:border-accent transition-all duration-300 hover:-translate-y-1 scroll-animate">
+                                        <span
+                                            class="material-symbols-outlined text-accent text-5xl drop-shadow-lg">auto_awesome</span>
+                                        <h3 class="text-text-dark dark:text-text-light text-xl font-bold font-serif">
+                                            أناقة لا مثيل لها</h3>
+                                        <p
+                                            class="text-text-dark/70 dark:text-text-light/70 text-sm font-normal leading-normal">
+                                            نصنع لكِ إطلالة لا تُنسى.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Testimonials Section -->
+                        <section class="py-12 sm:py-20">
+                            <h2
+                                class="font-serif text-text-dark dark:text-text-light text-3xl sm:text-4xl font-bold leading-tight tracking-[-0.015em] px-4 pb-8 text-center scroll-animate">
+                                آراء عملائنا</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+                                <div
+                                    class="flex flex-col items-center text-center gap-4 rounded-lg border-2 border-accent/30 bg-white dark:bg-background-dark/50 p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 scroll-animate">
+                                    <img class="w-20 h-20 rounded-full object-cover border-4 border-accent shadow-md"
+                                        data-alt="Circular avatar of a smiling woman"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX7a1JZZvKRaP2GoDRIP9ZUTlvRLHpjZErDkPY_ivpIKZEJupEYe14RvOUTsG-tUH1O7AKtULGeWMimxjxEOiasGPjtDDpiypdIOhB5p5JLsMgmh7byi4d6ElF0aiwqYY6gT4WeoQ2QWRdohpC6AxgvVAtfYVElIFTYDNAalxeEVY-MoxcBFaptn-_DKTvOVRTvfR59KkObKSiWg2Mi9gXwxqylWkWasbcogkZRqVCxFiG6BCRH8TjNpsdPsdOJcOV9kiQTwlTjTHH" />
+                                    <p class="text-text-dark/80 dark:text-text-light/80 italic">"الفستان كان أكثر من
+                                        رائع! شعرت كأنني أميرة في ليلتي الخاصة. شكراً عتيق."</p>
+                                    <div class="flex text-accent">
+                                        <span class="material-symbols-outlined">star</span>
+                                        <span class="material-symbols-outlined">star</span>
+                                        <span class="material-symbols-outlined">star</span>
+                                        <span class="material-symbols-outlined">star</span>
+                                        <span class="material-symbols-outlined">star</span>
+                                    </div>
+                                    <h3 class="text-text-dark dark:text-text-light font-bold">ليلى محمد</h3>
+                                </div>
+                                <div
+                                    class="flex flex-col items-center text-center gap-4 rounded-lg border-2 border-accent/30 bg-white dark:bg-background-dark/50 p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 scroll-animate">
+                                    <img class="w-20 h-20 rounded-full object-cover border-4 border-accent shadow-md"
+                                        data-alt="Circular avatar of a happy customer"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5Z_MOSc4vDg1X4j9sDh6xLGYOsoNZwlz7eGzIKYppU6JefBfpCy2DScUHV6W_B1c2HyASv8pMrd-TEgBCw_Yt2yn40SzPn1pyiqvrwgrELzcj-SOsjyC_THYA-OKT6GGXRQLXIv9gQ-Cyqd5D0cMk0xfp4f7wwtJA8k8mgZfirVHWIa85fHfbeEVumioPiwJXr8zYQSuWqnPJhoN4oDq1x3p43esSrj99U-JpATyx95IdkGxFLlJSLsCIvmS8u6jQGLeT9cgJxoA2" />
+                                    <p class="text-text-dark/80 dark:text-text-light/80 italic">"الجودة والتصميم لا يعلى
+                                        عليهما. كل التفاصيل كانت متقنة بشكل مذهل. سأعود بالتأكيد."</p>
+                                    <div class="flex text-accent">
+                                        <span class="material-symbols-outlined">star</span>
+                                        <span class="material-symbols-outlined">star</span>
+                                        <span class="material-symbols-outlined">star</span>
+                                        <span class="material-symbols-outlined">star</span>
+                                        <span class="material-symbols-outlined">star</span>
+                                    </div>
+                                    <h3 class="text-text-dark dark:text-text-light font-bold">سارة علي</h3>
+                                </div>
+                                <div
+                                    class="flex flex-col items-center text-center gap-4 rounded-lg border-2 border-accent/30 bg-white dark:bg-background-dark/50 p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 scroll-animate">
+                                    <img class="w-20 h-20 rounded-full object-cover border-4 border-accent shadow-md"
+                                        data-alt="Circular avatar of an elegant woman"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4Lj25u2CDb3bIky1XE_nf_Yd9BavcICYUsDbKM-ppR7MhVXCIF3q6daIsqjSUiE_dm7VgoVcuZadsI84bYe2bnS7Oo-CdNfD0FurV-9WyzUr2yXl32pLiatNqN9-ttfXR7oCYvZLV4vp2cGrVdIR8w6ISN7zD_vsxc_HolQxHHWDfzFBk6D0LWswYz4Y6_GQJfZhgnQMvHgtqNBO4tYgrZwsK2vV51Pjv-cYSVj30c6GT0uslc0nj8By_7UZiLkAvw7dTliXauWOY" />
+                                    <p class="text-text-dark/80 dark:text-text-light/80 italic">"تجربة تسوق فريدة من
+                                        نوعها. وجدت الفستان المثالي لمناسبتي القادمة بسهولة."</p>
+                                    <div class="flex text-accent">
+                                        <span class="material-symbols-outlined">star</span>
+                                        <span class="material-symbols-outlined">star</span>
+                                        <span class="material-symbols-outlined">star</span>
+                                        <span class="material-symbols-outlined">star</span>
+                                        <span class="material-symbols-outlined">star</span>
+                                    </div>
+                                    <h3 class="text-text-dark dark:text-text-light font-bold">نورة خالد</h3>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Contact Section -->
+                        <section id="contact" class="py-12 sm:py-20">
+                            <div
+                                class="max-w-2xl mx-auto text-center rounded-xl overflow-hidden contact-bg-pattern border border-accent/20 bg-background-light/30 dark:bg-background-dark/20 shadow-lg scroll-animate">
+                                <div
+                                    class="p-8 sm:p-12 backdrop-blur-sm bg-background-light/50 dark:bg-background-dark/50">
+                                    <h2
+                                        class="font-serif text-text-dark dark:text-text-light text-3xl sm:text-4xl font-bold leading-tight tracking-[-0.015em] px-4 pb-8">
+                                        تواصلي معنا</h2>
+                                    <form class="space-y-8 px-4">
+                                        <div class="relative">
+                                            <input
+                                                class="block rounded-lg px-4 pb-2.5 pt-5 w-full text-sm text-text-dark bg-background-light/50 dark:bg-background-dark/30 border border-accent/30 appearance-none dark:text-text-light focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent peer transition-shadow duration-300 focus:shadow-lg focus:shadow-accent/20"
+                                                id="name" placeholder=" " type="text" />
+                                            <label
+                                                class="absolute text-sm text-text-dark/70 dark:text-text-light/70 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] right-4 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 peer-focus:text-accent"
+                                                for="name">الاسم</label>
+                                        </div>
+                                        <div class="relative">
+                                            <input
+                                                class="block rounded-lg px-4 pb-2.5 pt-5 w-full text-sm text-text-dark bg-background-light/50 dark:bg-background-dark/30 border border-accent/30 appearance-none dark:text-text-light focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent peer transition-shadow duration-300 focus:shadow-lg focus:shadow-accent/20"
+                                                id="email" placeholder=" " type="email" />
+                                            <label
+                                                class="absolute text-sm text-text-dark/70 dark:text-text-light/70 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] right-4 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 peer-focus:text-accent"
+                                                for="email">البريد الإلكتروني</label>
+                                        </div>
+                                        <div class="relative">
+                                            <textarea
+                                                class="block rounded-lg px-4 pb-2.5 pt-5 w-full text-sm text-text-dark bg-background-light/50 dark:bg-background-dark/30 border border-accent/30 appearance-none dark:text-text-light focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent peer transition-shadow duration-300 focus:shadow-lg focus:shadow-accent/20"
+                                                id="message" placeholder=" " rows="4"></textarea>
+                                            <label
+                                                class="absolute text-sm text-text-dark/70 dark:text-text-light/70 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] right-4 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 peer-focus:text-accent"
+                                                for="message">رسالتك</label>
+                                        </div>
+                                        <button
+                                            class="w-full rounded-lg bg-accent text-primary px-5 py-3 text-lg font-bold transition-all hover:bg-yellow-400 hover:shadow-xl hover:shadow-accent/30 transform hover:-translate-y-1"
+                                            type="submit">إرسال الرسالة</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="bg-primary border-t border-accent/20">
+                <div class="max-w-7xl mx-auto px-4 sm:px-10 py-8 text-center text-text-light">
+                    <div class="flex flex-col sm:flex-row justify-between items-center gap-6">
+                        <div class="flex items-center gap-4 text-accent">
+                            <div class="size-6">
+                                <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h2 class="font-serif text-lg font-bold">عتيق</h2>
+                        </div>
+                        <nav class="flex gap-6">
+                            <a class="text-sm text-text-light hover:text-accent transition-colors"
+                                href="#home">الرئيسية</a>
+                            <a class="text-sm text-text-light hover:text-accent transition-colors"
+                                href="#collections">المجموعات</a>
+                            <a class="text-sm text-text-light hover:text-accent transition-colors" href="#about">عن
+                                عتيق</a>
+                            <a class="text-sm text-text-light hover:text-accent transition-colors" href="#contact">اتصل
+                                بنا</a>
+                        </nav>
+                        <div class="flex gap-4">
+                            <a class="text-text-light/70 hover:text-accent transition-colors" href="#">
+                                <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path clip-rule="evenodd"
+                                        d="M12.315 2c-4.42 0-7.784 3.235-7.784 7.205 0 2.505 1.513 4.67 3.657 5.93.28.163.386.503.28.81a5.61 5.61 0 01-.8 1.94c-.16.29-.013.66.28.74a5.61 5.61 0 003.525-1.16c.33-.21.75-.21 1.08 0a5.61 5.61 0 003.525 1.16c.293-.08.44-.45.28-.74a5.61 5.61 0 01-.8-1.94c-.106-.307.0-.647.28-.81 2.144-1.26 3.657-3.425 3.657-5.93C20.1 5.235 16.735 2 12.315 2zM4.535 9.205c0-3.34 2.8-6.04 6.28-6.04s6.28 2.7 6.28 6.04c0 2.13-1.18 3.98-2.94 4.97a.561.561 0 01-.7.04 5.61 5.61 0 00-4.76 0 .561.561 0 01-.7-.04c-1.76-1-2.94-2.84-2.94-4.97z"
+                                        fill-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                            <a class="text-text-light/70 hover:text-accent transition-colors" href="#">
+                                <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path clip-rule="evenodd"
+                                        d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.238 6.06c.153-.01.308-.02.462-.02.392 0 .776.04 1.15.118a.6.6 0 01.54.64v1.076a.6.6 0 01-.36.54c-.15.078-.31.15-.47.218a.6.6 0 00-.36.54v4.36c0 .32-.26.58-.58.58h-.87a.58.58 0 01-.58-.58v-2.2c0-.32-.26-.58-.58-.58h-.27a.58.58 0 00-.58.58v2.2a.58.58 0 01-.58.58h-.87a.58.58 0 01-.58-.58v-4.36a.6.6 0 00-.36-.54c-.16-.07-.32-.14-.47-.218a.6.6 0 01-.36-.54V8.798a.6.6 0 01.54-.64c.374-.08.758-.12 1.15-.12.154 0 .308.01.462.02h.01zm-3.238 0h.01z"
+                                        fill-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                            <a class="text-text-light/70 hover:text-accent transition-colors" href="#">
+                                <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M11.94 2.1a10 10 0 1010 10 10 10 0 00-10-10zm0 18.5a8.5 8.5 0 118.5-8.5 8.51 8.51 0 01-8.5 8.5zm4.09-12.2H7.87a.4.4 0 00-.4.4v8.62a.4.4 0 00.4.4h8.16a.4.4 0 00.4-.4V8.3a.4.4 0 00-.4-.4zm-1 2.2a.4.4 0 010 .56.4.4 0 01-.56 0l-3-3a.4.4 0 010-.56.4.4 0 01.56 0l3 3zm-6.23 2.58h6.29a.4.4 0 110 .81H7.87a.4.4 0 110-.81zm0 2.5h3.69a.4.4 0 110 .81H7.87a.4.4 0 110-.81z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="mt-8 text-xs text-text-light/60">© 2025 عتيق – جميع الحقوق محفوظة</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuBtn.contains(e.target) && !mobileNav.contains(e.target)) {
+                mobileNav.classList.remove('active');
+            }
+        });
+    </script>
+
+    <!-- Load React Component at the end -->
+    <script type="text/babel" src="AteeqProductShowcase.jsx"></script>
+
+    <script type="text/babel">
+        // Render React component
+        const root = ReactDOM.createRoot(document.getElementById('react-product-showcase'));
+        root.render(<AteeqProductShowcase />);
+    </script>
+
+    <!-- Scroll animation script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const scrollElements = document.querySelectorAll('.scroll-animate');
+
+            const elementInView = (el, dividend = 1) => {
+                const elementTop = el.getBoundingClientRect().top;
+                return (
+                    elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+                );
+            };
+
+            const displayScrollElement = (element) => {
+                element.classList.add('visible');
+            };
+
+            const handleScrollAnimation = () => {
+                scrollElements.forEach((el, index) => {
+                    if (elementInView(el, 1.25)) {
+                        setTimeout(() => {
+                            displayScrollElement(el);
+                        }, index * 100);
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', () => {
+                handleScrollAnimation();
+            });
+
+            handleScrollAnimation();
+        });
+    </script>
+</body>
+
+</html>
