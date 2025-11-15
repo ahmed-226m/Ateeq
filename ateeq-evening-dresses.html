@@ -47,7 +47,7 @@
 
             <!-- Header -->
             <header
-                class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-accent/20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm px-4 sm:px-10 py-4">
+                class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-accent/20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm px-4 sm:px-10 h-[72px]">
                 <div class="flex items-center gap-4 text-accent animate-slide-left">
                     <div class="size-6 flex-shrink-0">
                         <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
@@ -59,6 +59,16 @@
                     <h2 class="font-serif text-xl font-bold leading-none text-text-dark dark:text-accent">
                         عتيق – فساتين سواريه</h2>
                 </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-button" id="mobileMenuBtn" aria-label="القائمة">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+
+                <!-- Desktop Navigation -->
                 <nav class="hidden sm:flex items-center flex-1 justify-end gap-8 animate-slide-right">
                     <a class="text-text-dark dark:text-text-light text-sm font-medium leading-none hover:text-accent dark:hover:text-accent transition-colors"
                         href="#home">الرئيسية</a>
@@ -72,29 +82,40 @@
             </header>
 
 
+            <!-- Mobile Navigation Menu -->
+            <nav class="mobile-nav" id="mobileNav">
+                <a class="text-text-light text-base font-medium hover:text-accent transition-colors"
+                    href="#home">الرئيسية</a>
+                <a class="text-text-light text-base font-medium hover:text-accent transition-colors"
+                    href="#collections">المجموعات</a>
+                <a class="text-text-light text-base font-medium hover:text-accent transition-colors" href="#about">عن
+                    عتيق</a>
+                <a class="text-text-light text-base font-medium hover:text-accent transition-colors"
+                    href="#contact">اتصل بنا</a>
+            </nav>
+
+
             <!-- Main Content -->
             <main class="flex flex-col flex-1 pt-[72px]">
-                <section id="home" class="w-full @container">
-                    <div class="@[480px]:p-4">
-                        <div class="flex min-h-[60vh] sm:min-h-[75vh] flex-col gap-6 bg-cover bg-center bg-no-repeat items-center justify-center p-4 text-center @[480px]:gap-8"
-                            data-alt="Model in an elegant evening gown posing with soft lighting."
-                            style='background-image: linear-gradient(rgba(10, 29, 55, 0.5) 0%, rgba(10, 29, 55, 0.7) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuA8x8YjH3NpPiysbp24ezxq-KxUyRb6_8DmXracR8A6to9HWrZz4Hib826SjxsaStPmfVbbj6blXku0W5Xnjk_5tsNw1L4alZd6ckAF1TAN5vtIdkvrQGtR2OyRCV_dXs3etoIeiANk_2bKdG28eYEDVoGdEMP3T_asziKpfi75GV8dFJVjeBVxPf-v7VbnneLJiGuTC8pEOsi5kRT32CN0P4Kmggr0c-sQ2h0WLvmevqEa6QOIWmPiLmebzgyVd2XpWpD1TU_QiJ94");'>
-                            <div class="flex flex-col gap-4">
-                                <h1
-                                    class="font-serif text-4xl font-bold leading-tight tracking-[-0.033em] text-accent @[480px]:text-6xl @[480px]:font-bold @[480px]:leading-tight animate-fade-in">
-                                    فساتين سواريه فاخرة لأجمل المناسبات
-                                </h1>
-                                <h2 class="text-text-light text-lg font-normal leading-normal @[480px]:text-xl @[480px]:font-normal @[480px]:leading-normal animate-fade-in"
-                                    style="animation-delay: 0.3s;">
-                                    اكتشفي الأناقة والجمال في كل تصميم.
-                                </h2>
-                            </div>
-                            <a href="#collections"
-                                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 @[480px]:h-14 @[480px]:px-8 bg-accent text-primary text-base font-bold leading-normal tracking-[0.015em] transition-all hover:bg-yellow-400 hover:shadow-lg hover:shadow-accent/20 animate-zoom"
-                                style="animation-delay: 0.6s;">
-                                <span class="truncate">تسوق الآن</span>
-                            </a>
+                <section id="home" class="w-full">
+                    <div class="flex min-h-[calc(100vh-72px)] flex-col gap-6 bg-cover bg-center bg-no-repeat items-center justify-center p-4 text-center"
+                        data-alt="Model in an elegant evening gown posing with soft lighting."
+                        style='background-image: linear-gradient(rgba(10, 29, 55, 0.5) 0%, rgba(10, 29, 55, 0.7) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuA8x8YjH3NpPiysbp24ezxq-KxUyRb6_8DmXracR8A6to9HWrZz4Hib826SjxsaStPmfVbbj6blXku0W5Xnjk_5tsNw1L4alZd6ckAF1TAN5vtIdkvrQGtR2OyRCV_dXs3etoIeiANk_2bKdG28eYEDVoGdEMP3T_asziKpfi75GV8dFJVjeBVxPf-v7VbnneLJiGuTC8pEOsi5kRT32CN0P4Kmggr0c-sQ2h0WLvmevqEa6QOIWmPiLmebzgyVd2XpWpD1TU_QiJ94");'>
+                        <div class="flex flex-col gap-4">
+                            <h1
+                                class="font-serif text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-[-0.033em] text-accent animate-fade-in">
+                                فساتين سواريه فاخرة لأجمل المناسبات
+                            </h1>
+                            <h2 class="text-text-light text-lg sm:text-xl font-normal leading-normal animate-fade-in"
+                                style="animation-delay: 0.3s;">
+                                اكتشفي الأناقة والجمال في كل تصميم.
+                            </h2>
                         </div>
+                        <a href="#collections"
+                            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 sm:h-14 sm:px-8 bg-accent text-primary text-base font-bold leading-normal tracking-[0.015em] transition-all hover:bg-yellow-400 hover:shadow-lg hover:shadow-accent/20 animate-zoom"
+                            style="animation-delay: 0.6s;">
+                            <span class="truncate">تسوق الآن</span>
+                        </a>
                     </div>
                 </section>
                 <div class="px-4 sm:px-10 lg:px-20 xl:px-40 py-5">
@@ -388,6 +409,31 @@
         </div>
     </div>
 
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuBtn.contains(e.target) && !mobileNav.contains(e.target)) {
+                mobileNav.classList.remove('active');
+            }
+        });
+    </script>
+
     <!-- Load React Component at the end -->
     <script type="text/babel" src="AteeqProductShowcase.jsx"></script>
 
@@ -418,7 +464,7 @@
                     if (elementInView(el, 1.25)) {
                         setTimeout(() => {
                             displayScrollElement(el);
-                        }, index * 100); 
+                        }, index * 100);
                     }
                 });
             };
