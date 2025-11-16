@@ -32,35 +32,35 @@ const defaultProducts = [
         name: 'فستان القمر',
         description: 'فساتين زهري أنيقة وساحرة',
         category: 'فساتين قصيرة',
-        image: 'https://placehold.co/400x500/fec89a/ffffff?text=فستان+القمر'
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD7G1vGJp58pDEzZ6FjJaaTPZJVcPDaFKFSnaWJOPEerFtvsRRbCaQo_gQbbRNJ9g-gNZZyP28m2lrolK22jiq6X-vAnb6xTbj40ibJ29LKBexzq46SzHFbIJSr9B3gq_Xo2uinf_rJix6fsTsAMIuyPiYCY3-dat8GrrKC0NPBy6GhPVjfGb2beEmuuwpQO670bbu-ilejbugQWiu6KRu6iuLlpCHCXw8i9Oc4kIYcJ7Yc92NXCsuT2lVvHrwRs43j-haJykmmXvbg'
     },
     {
         id: 6,
         name: 'فستان الليل الأنيق',
         description: 'رقي وفخامة لكل مناسبة',
         category: 'فساتين طويلة',
-        image: 'https://placehold.co/400x500/1d3557/ffffff?text=فستان+الليل'
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAboFXyzlFP98RRqZxIQA8d7rcK9PYydIJLNeXxRz8Efy_L18iqycWqS1sGzFdZfGcQaBZKQ3VsASLtLO_pwT_-GnJmtGPf_tp_QUfbLo_uqThQ3XxkAPeVTV_P63jAAhtLGxGD-APu3f54KJZhfuKT0d1EBYgq0J47I3Zne762W310td4-vEixHRvTt8TQfLQMroucd2GwEKcoLUUiRz1M2oihVqhvqbkA_c5LzNpJUinrteRqU5D1Qje0ugLAhjlYoxsFGOnaXjZR'
     },
     {
         id: 7,
         name: 'فستان الوردة البيضاء',
         description: 'تصميم ناعم يناسب جميع المناسبات',
         category: 'فساتين قصيرة',
-        image: 'https://placehold.co/400x500/f1faee/457b9d?text=فستان+الوردة'
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA3JiO0MP1kSOYhvxhbw3TPBH4oG-D9lJ2iAE5TC3gk_mh8dwtLBXX83z68z8jbr9ljYWznd0N3EJqscflAZKqTgJwolUPwSUxDb2LjzxYWowIOA7dlLMCk603eUoyce5A5C7UARvGq-Z4dPaOW3Ii4yHGmKFxbLJDZdK2sW0-NaDWXGtITJYHoGpsslU0R4w0tOj_MlKbKoX6ALnrfxCfCl4VCyEggeR4jyoCM5CsmCpAj0nP1OY7ZGTjHdb3vYjRmdUKNr8fQMTlS'
     },
     {
         id: 8,
         name: 'فستان الزمرد',
         description: 'فستان أخضر ملكي بقصة مميزة',
         category: 'فساتين طويلة',
-        image: 'https://placehold.co/400x500/2a9d8f/ffffff?text=فستان+الزمرد'
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD7G1vGJp58pDEzZ6FjJaaTPZJVcPDaFKFSnaWJOPEerFtvsRRbCaQo_gQbbRNJ9g-gNZZyP28m2lrolK22jiq6X-vAnb6xTbj40ibJ29LKBexzq46SzHFbIJSr9B3gq_Xo2uinf_rJix6fsTsAMIuyPiYCY3-dat8GrrKC0NPBy6GhPVjfGb2beEmuuwpQO670bbu-ilejbugQWiu6KRu6iuLlpCHCXw8i9Oc4kIYcJ7Yc92NXCsuT2lVvHrwRs43j-haJykmmXvbg'
     },
     {
         id: 9,
         name: 'فستان الدانتيل',
         description: 'أناقة كلاسيكية لا تبطل موضتها',
         category: 'فساتين كلاسيك',
-        image: 'https://placehold.co/400x500/22223b/ffffff?text=فستان+الدانتيل'
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDzC6sKsOMoqokssWOdYlJNSAhvx10V6i3WcXHjr5eZNTb_2D6wCaQZaCVpOL06DZdWbvGRxaMgW7Cq0SWhk5rO13D0O6OrJ6r2X9xt7D_5bz9iIAIVhs6hNANnKeG2H-F9Xt-AV3z1-PHEYYnrKaQDFmOVn51P9Az34UxL9CXUhF9g1HBoilLJaDRluRnokRTcenwXc8HjSo-VDhB0yrEGVT4ruLcK94lIhzyoRSG88zXc2nshAucYoK2YgtI6JmJpBaVTdO6f5fsC'
     }
 ];
 
