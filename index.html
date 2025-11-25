@@ -13,14 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&amp;family=Tajawal:wght@400;500;700&amp;display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-
-    <!-- React & ReactDOM CDN -->
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-    <link rel="stylesheet" href="styles.css" />
-
+    
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -37,7 +30,8 @@
                 },
             },
         }
-    </script>
+        </script>
+        <link rel="stylesheet" href="css/index.css" />
 </head>
 
 
@@ -200,13 +194,14 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="mt-4 flex justify-center">
+                                <a href="pages/collection.html"
+                                    class="rounded-md border border-accent text-accent px-4 py-2 text-sm font-bold transition-colors hover:bg-accent hover:text-primary inline-block">
+                                    عرض المزيد
+                                </a>
+                            </div>
 
                         </section>
-
-                        <!-- Product Showcase (React Component) -->
-                        <!-- <section class="py-12 sm:py-20">
-                            <div id="react-product-showcase"></div>
-                        </section> -->
 
                         <!-- About Section -->
                         <section id="about" class="py-12 sm:py-20 text-center">
@@ -410,72 +405,7 @@
     </div>
 
 
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileNav = document.getElementById('mobileNav');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileNav.classList.toggle('active');
-        });
-
-        // Close menu when clicking on a link
-        mobileNav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileNav.classList.remove('active');
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!mobileMenuBtn.contains(e.target) && !mobileNav.contains(e.target)) {
-                mobileNav.classList.remove('active');
-            }
-        });
-    </script>
-
-    <!-- Load React Component at the end -->
-    <script type="text/babel" src="AteeqProductShowcase.jsx"></script>
-
-    <script type="text/babel">
-        // Render React component
-        const root = ReactDOM.createRoot(document.getElementById('react-product-showcase'));
-        root.render(<AteeqProductShowcase />);
-    </script>
-
-    <!-- Scroll animation script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const scrollElements = document.querySelectorAll('.scroll-animate');
-
-            const elementInView = (el, dividend = 1) => {
-                const elementTop = el.getBoundingClientRect().top;
-                return (
-                    elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
-                );
-            };
-
-            const displayScrollElement = (element) => {
-                element.classList.add('visible');
-            };
-
-            const handleScrollAnimation = () => {
-                scrollElements.forEach((el, index) => {
-                    if (elementInView(el, 1.25)) {
-                        setTimeout(() => {
-                            displayScrollElement(el);
-                        }, index * 100);
-                    }
-                });
-            };
-
-            window.addEventListener('scroll', () => {
-                handleScrollAnimation();
-            });
-
-            handleScrollAnimation();
-        });
-    </script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,136 @@
+/* Filter Buttons */
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    border: 1px solid rgba(212, 175, 55, 0.3); 
+    border-radius: 9999px;
+    background-color: transparent;
+    color: inherit;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.filter-btn:hover {
+    border-color: #D4AF37; 
+    background-color: rgba(212, 175, 55, 0.1);
+}
+
+.filter-btn.active {
+    background-color: #D4AF37; 
+    color: #0A1D37; 
+    border-color: #D4AF37;
+    font-weight: 700;
+}
+
+/* Product Card */
+.product-card {
+    background-color: white;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+.dark .product-card {
+    background-color: rgba(10, 29, 55, 0.5);
+    border-color: rgba(212, 175, 55, 0.2);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    border-color: #D4AF37;
+}
+
+.product-image-container {
+    position: relative;
+    padding-top: 133%;
+    overflow: hidden;
+    background-color: #f3f4f6;
+}
+
+.dark .product-image-container {
+    background-color: #1f2937;
+}
+
+.product-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 1.25rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.product-category {
+    font-size: 0.75rem;
+    color: #D4AF37; 
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+}
+
+.product-title {
+    font-family: 'Amiri', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: inherit;
+}
+
+.product-description {
+    font-size: 0.875rem;
+    color: inherit;
+    opacity: 0.7;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.product-btn {
+    margin-top: auto;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #D4AF37;
+    border-radius: 0.25rem;
+    background-color: transparent;
+    color: #D4AF37;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.product-btn:hover {
+    background-color: #D4AF37;
+    color: #0A1D37;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
